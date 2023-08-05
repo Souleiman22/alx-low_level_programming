@@ -16,7 +16,4 @@ int _strlen(char *s)
 
 	return (longi);
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 34e8a3fb8654b2d86038af01ce7a2e6431860121

@@ -1,9 +1,5 @@
 #include "main.h"
-<<<<<<< HEAD
- /**
-=======
 /**
->>>>>>> 34e8a3fb8654b2d86038af01ce7a2e6431860121
  * _strcat - concatenates two strings
  * @dest: input value
  * @src: input value
