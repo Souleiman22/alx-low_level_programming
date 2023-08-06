@@ -1,5 +1,8 @@
 #include "main.h"
+<<<<<<< HEAD
+=======
 
+>>>>>>> 34e8a3fb8654b2d86038af01ce7a2e6431860121
 /**
  * _atoi - convert a string into an integer.
  *
@@ -7,7 +10,10 @@
  *
  * Return: integer.
  */
+<<<<<<< HEAD
+=======
 
+>>>>>>> 34e8a3fb8654b2d86038af01ce7a2e6431860121
 int _atoi(char *s)
 {
 	int sign = 1, i = 0;
