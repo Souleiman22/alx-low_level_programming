@@ -1,14 +1,27 @@
 #!/bin/bash
 
-# Compile each .c file into an object file
-for source_file in *.c; do
-    gcc -c "$source_file" -o "${source_file%.c}.o"
+# Collect all the .c files in the current directory
+c_files=$(ls *.c 2>/dev/null)
+
+# Check if there are any .c files
+if [ -z "$c_files" ]; then
+    echo "No .c files found in the current directory."
+    exit 1
+fi
+
+# Compile each .c file into object files
+object_files=""
+for file in $c_files; do
+    object_file="${file%.c}.o"
+    gcc -c "$file" -o "$object_file"
+    object_files+=" $object_file"
 done
 
-# Create the static library
-ar rcs liball.a *.o
+# Create the static library (liball.a) from the object files
+ar rcs liball.a $object_files
 
-# Clean up intermediate object files
-rm -f *.o
+# Cleanup: remove the temporary object files
+rm -f $object_files
 
-echo "Static library liball.a created successfully."
+echo "Static library liball.a successfully created."
+
